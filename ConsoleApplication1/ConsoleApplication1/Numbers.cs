@@ -15,21 +15,18 @@ namespace ConsoleApplication1
 
             int num1 = 0;
             int num2 = 0;
-            int highestIndex = 0;
 
             for (int i = 0; i < numbers.Count; i++)
             {
                 if (numbers[i] > num1)
                 {
+                    num2 = num1;
                     num1 = numbers[i];
-                    highestIndex = i;
                 }
-            }
-
-            for (int j = 0; j < numbers.Count; j++)
-            {
-                if (numbers[j] > num2 && j != highestIndex)
-                    num2 = numbers[j];
+                else if (numbers[i] > num2)
+                {
+                    num2 = numbers[i];
+                }
             }
 
             return num1 + num2;
